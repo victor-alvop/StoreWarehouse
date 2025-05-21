@@ -60,6 +60,17 @@ CREATE TABLE orders (
 
 SELECT * FROM orders;
 
+CREATE TABLE fact_sales (
+    id SERIAL PRIMARY KEY,
+    date_id INT REFERENCES dim_date(id),
+    product_id INT REFERENCES dim_product(id),
+    customer_id INT REFERENCES dim_customer(id),
+    store_id INT REFERENCES dim_store(id),
+    sales_channel VARCHAR(20),
+    quantity INT,
+    total NUMERIC(10, 2)
+);
+
 CREATE TABLE order_items (
     id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(id),

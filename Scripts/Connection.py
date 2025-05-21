@@ -2,20 +2,21 @@ import psycopg2
 
 # Datos de conexión (puedes moverlos a variables de entorno si lo deseas)
 PROD_DB_CONFIG = {
-    'host': '******',
-    'port': ******,
-    'database': '******',
-    'user': '******',
-    'password': '******'
+    'host': 'switchback.proxy.rlwy.net',
+    'port': 11021,
+    'database': 'railway',
+    'user': 'postgres',
+    'password': 'VAdwtDLwtvKEdxQWUoBZYgZeQlfhGwJx'
 }
 
 DWH_DB_CONFIG = {
-    'host': '******',
-    'port': ******,
-    'database': '******',
-    'user': '******',
-    'password': '******'
+    'host': 'nozomi.proxy.rlwy.net',
+    'port': 56031,
+    'database': 'railway',
+    'user': 'postgres',
+    'password': 'CMytsZvTJJHWKEizICLLYvfbXzBKYyeo'
 }
+#postgresql://postgres:CMytsZvTJJHWKEizICLLYvfbXzBKYyeo@nozomi.proxy.rlwy.net:56031/railway
 
 def connection(production_db_config, warehouse_db_config):
     try:
