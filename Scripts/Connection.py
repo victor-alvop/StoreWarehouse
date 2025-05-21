@@ -3,18 +3,18 @@ import psycopg2
 # Datos de conexión (puedes moverlos a variables de entorno si lo deseas)
 PROD_DB_CONFIG = {
     'host': 'switchback.proxy.rlwy.net',
-    'port': 11021,
-    'database': 'railway',
-    'user': 'postgres',
-    'password': 'VAdwtDLwtvKEdxQWUoBZYgZeQlfhGwJx'
+    'port': *,
+    'database': '*',
+    'user': '*',
+    'password': '*'
 }
 
 DWH_DB_CONFIG = {
     'host': 'nozomi.proxy.rlwy.net',
-    'port': 56031,
-    'database': 'railway',
-    'user': 'postgres',
-    'password': 'CMytsZvTJJHWKEizICLLYvfbXzBKYyeo'
+    'port': *,
+    'database': '*',
+    'user': '*',
+    'password': '*'
 }
 #postgresql://postgres:CMytsZvTJJHWKEizICLLYvfbXzBKYyeo@nozomi.proxy.rlwy.net:56031/railway
 
