@@ -9,13 +9,6 @@ CREATE TABLE dim_date (
     quarter INT
 );
 
-CREATE TABLE dim_product (
-    id INT PRIMARY KEY,
-    name VARCHAR(100),
-    category VARCHAR(50),
-    supplier_id INT
-);
-
 CREATE TABLE dim_customer (
     id INT PRIMARY KEY,
     name VARCHAR(100),
@@ -50,7 +43,6 @@ CREATE TABLE fact_sales (
     date_id INT REFERENCES dim_date(id),
     product_id INT REFERENCES dim_product(id),
     customer_id INT REFERENCES dim_customer(id),
-    store_id INT REFERENCES dim_store(id),
     sales_channel VARCHAR(20),
     quantity INT,
     total NUMERIC(10, 2)
