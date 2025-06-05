@@ -41,7 +41,6 @@ CREATE TABLE dim_supplier (
 CREATE TABLE fact_sales (
     id SERIAL PRIMARY KEY,
     date_id INT REFERENCES dim_date(id),
-    product_id INT REFERENCES dim_product(id),
     customer_id INT REFERENCES dim_customer(id),
     sales_channel VARCHAR(20),
     quantity INT,
